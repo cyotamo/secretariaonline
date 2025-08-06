@@ -9,8 +9,8 @@ body {
     color: #333;
     width: 100%;
     overflow-x: hidden;
-    padding-top: 160px; /* compensação para header + nav fixos */
-    padding-bottom: 60px; /* espaço para footer fixo */
+    padding-top: 200px; /* compensação para header + banner + nav */
+    padding-bottom: 60px;
 }
 header {
     background: #0d47a1;
@@ -31,18 +31,29 @@ header h1 { font-size: 20px; }
 header h2 { font-size: 14px; }
 header h3 { font-size: 13px; }
 
+.info-banner {
+    background: #0d47a1;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px;
+    width: 100%;
+    position: fixed;
+    top: 88px; /* logo abaixo do header */
+    left: 0;
+    z-index: 999;
+}
+
 nav {
     display: flex;
     justify-content: center;
     gap: 15px;
-    background: #0d47a1; /* mesma cor do header para continuidade */
+    background: #1565c0;
     padding: 8px;
     position: fixed;
-    top: 88px; /* exatamente abaixo do header */
+    top: 128px; /* abaixo do info-banner */
     width: 100%;
-    z-index: 999;
-    margin: 0;
-    border: none;
+    z-index: 998;
 }
 nav a {
     color: white;
@@ -129,6 +140,7 @@ footer {
     header h1 { font-size: 18px; }
     header h2 { font-size: 13px; }
     header h3 { font-size: 12px; }
+    .info-banner { font-size: 13px; padding: 6px; }
     nav {
         flex-wrap: wrap;
         gap: 10px;
