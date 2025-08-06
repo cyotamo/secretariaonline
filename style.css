@@ -1,4 +1,4 @@
-  * {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +9,7 @@ body {
     color: #333;
     width: 100%;
     overflow-x: hidden;
-    padding-top: 180px; /* espaço para header + nav fixos */
+    padding-top: 160px; /* espaço ajustado para header + nav fixos sem espaço extra */
     padding-bottom: 60px; /* espaço para footer fixo */
 }
 header {
@@ -32,9 +32,9 @@ nav {
     justify-content: center;
     gap: 15px;
     background: #1565c0;
-    padding: 10px;
+    padding: 8px; /* menos espaço vertical */
     position: fixed;
-    top: 100px; /* abaixo do header */
+    top: 96px; /* colado ao header */
     width: 100%;
     z-index: 999;
 }
