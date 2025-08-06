@@ -9,19 +9,23 @@ body {
     color: #333;
     width: 100%;
     overflow-x: hidden;
-    padding-top: 160px; /* espaço ajustado para header + nav fixos sem espaço extra */
+    padding-top: 160px; /* compensação para header + nav fixos */
     padding-bottom: 60px; /* espaço para footer fixo */
 }
 header {
     background: #0d47a1;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 8px 5px;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+}
+header h1, header h2, header h3 {
+    margin: 0;
+    padding: 0;
 }
 header h1 { font-size: 20px; }
 header h2 { font-size: 14px; }
@@ -32,11 +36,13 @@ nav {
     justify-content: center;
     gap: 15px;
     background: #1565c0;
-    padding: 8px; /* menos espaço vertical */
+    padding: 8px;
     position: fixed;
-    top: 96px; /* colado ao header */
+    top: 88px; /* exatamente abaixo do header sem espaço */
     width: 100%;
     z-index: 999;
+    margin: 0; /* eliminar qualquer margem */
+    border: none; /* eliminar qualquer linha */
 }
 nav a {
     color: white;
