@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    width: 100%;
+    overflow-x: hidden;
+}
+header {
+    background: #0d47a1;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    width: 100%;
+}
+header h1 { font-size: 24px; }
+header h2 { font-size: 18px; }
+header h3 { font-size: 16px; }
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1565c0;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+nav .menu-links {
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+nav a:hover, nav a.active { background: #1976d2; }
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.service-section { display: none; margin-top: 30px; }
+.service-section.active { display: block; }
+.service-section h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #0d47a1;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+.card i {
+    font-size: 28px;
+    color: #0d47a1;
+    margin-bottom: 10px;
+}
+.card a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+.card button {
+    background: #0d47a1;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+}
+.card button:hover { background: #1565c0; }
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #0d47a1;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header h1 { font-size: 20px; }
+    header h2 { font-size: 16px; }
+    header h3 { font-size: 14px; }
+
+    .menu-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #1565c0;
+        width: 100%;
+        display: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .menu-links.show { display: flex; }
+    .menu-toggle { display: block; }
+}
