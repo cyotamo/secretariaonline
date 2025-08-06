@@ -22,6 +22,7 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 header h1, header h2, header h3 {
     margin: 0;
@@ -38,11 +39,12 @@ nav {
     background: #1565c0;
     padding: 8px;
     position: fixed;
-    top: 88px; /* exatamente abaixo do header sem espaço */
+    top: 88px; /* exatamente abaixo do header */
     width: 100%;
     z-index: 999;
-    margin: 0; /* eliminar qualquer margem */
-    border: none; /* eliminar qualquer linha */
+    margin: 0;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 nav a {
     color: white;
