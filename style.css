@@ -469,6 +469,20 @@ body {
     cursor: pointer;
 }
 
+/* Card as link styling */
+.service-card[href] {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+
+.service-card[href]:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-light);
+}
+
 .card-button::before {
     content: '';
     position: absolute;

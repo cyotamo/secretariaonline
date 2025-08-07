@@ -98,10 +98,25 @@ function addCardInteractions() {
     const serviceCards = document.querySelectorAll('.service-card');
     
     serviceCards.forEach(card => {
+        // Check if the card itself is a link
+        const cardHref = card.getAttribute('href');
+        if (cardHref && (cardHref.startsWith('http') || cardHref.startsWith('https'))) {
+            // Skip adding event listeners for cards that are external links
+            return;
+        }
+        
         const button = card.querySelector('.card-button');
         
         if (button) {
-            // Add click feedback
+            // Check if it's an external link - if so, skip adding event listeners
+            const href = button.getAttribute('href');
+            const isExternal = button.getAttribute('data-external') === 'true';
+            if (href && (href.startsWith('http') || href.startsWith('https') || isExternal)) {
+                // Don't add any event listeners for external links
+                return;
+            }
+            
+            // Add click feedback only for internal links
             button.addEventListener('click', (e) => {
                 // Add ripple effect
                 createRippleEffect(e);
