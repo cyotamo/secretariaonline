@@ -44,8 +44,7 @@ body {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: white;
     padding: 1.5rem 0;
-    position: sticky;
-    top: 0;
+    position: static;
     z-index: 1000;
     box-shadow: var(--shadow-lg);
 }
@@ -142,8 +141,7 @@ body {
 .main-nav {
     background: white;
     border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 120px;
+    position: static;
     z-index: 998;
     box-shadow: var(--shadow-sm);
     padding: 0.5rem 0;
@@ -787,7 +785,6 @@ body {
     }
     
     .main-nav {
-        top: 100px;
         padding: 0.25rem 0;
     }
     
@@ -930,9 +927,7 @@ body {
         padding: 0.75rem 0;
     }
     
-    .main-nav {
-        top: 90px;
-    }
+
     
 
     
